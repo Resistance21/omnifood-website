@@ -1,0 +1,326 @@
+/************************/
+/* Small compuer screen*/
+/*************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .hero-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial-container {
+    padding: 9.2rem 3.2rem;
+  }
+}
+
+/************************/
+/* Landscape tablet*/
+/*************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .heading-secondary,
+  .heading-tertiary {
+    font-size: 3.6rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .testimonial-container {
+    padding: 9.2rem 3.2rem;
+  }
+}
+
+/************************/
+/* 944 px*/
+/*************************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 10;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+    background-color: rgb(255, 255, 255);
+  }
+
+  .header.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+
+  .hero-image {
+    width: 60%;
+  }
+
+  .hero-text-box,
+  .hero-image-box {
+    text-align: center;
+  }
+
+  .hero-customers {
+    justify-content: center;
+  }
+
+  .img-logos {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-card-info {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery-img {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/************************/
+/* 704 px*/
+/*************************/
+
+@media (max-width: 44em) {
+  .grid--3col,
+  .grid--4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diet-card {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .heading-secondary,
+  .heading-tertiary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-column: span 2;
+    grid-row: 1;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+/************************/
+/* 544 px*/
+/*************************/
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2col,
+  .grid--3col,
+  .grid--4col {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .hero-image {
+    width: 85%;
+  }
+
+  .img-logos {
+    height: 1.2rem;
+  }
+
+  .step-image-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-image-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-image-box {
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-image-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+}
+
+/************************/
+/* fix for flex gap in safari*/
+/*************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
